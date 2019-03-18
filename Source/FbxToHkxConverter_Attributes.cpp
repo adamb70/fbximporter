@@ -130,12 +130,20 @@ bool FbxToHkxConverter::createAndSampleAttribute(hkxScene *scene, int animStackI
 	FbxDataType type = prop.GetPropertyDataType();
 	EFbxType dataType = type.GetType();
 
-	FbxTimeSpan animTimeSpan = lAnimStack->GetLocalTimeSpan();
-	FbxTime timePerFrame; timePerFrame.SetTime(0, 0, 0, 1, 0, m_curFbxScene->GetGlobalSettings().GetTimeMode());
+	FbxTimeSpan animTimeSpan;
+	FbxTime timePerFrame;
+	FbxTime startTime;
+	FbxTime endTime;
 
-	// Since the end time is assumed to be inclusive, sample up to one frame beyond it
-	const FbxTime startTime = animTimeSpan.GetStart();
-	const FbxTime endTime = animTimeSpan.GetStop();
+	if (lAnimStack)
+	{
+		animTimeSpan = lAnimStack->GetLocalTimeSpan();
+	    timePerFrame.SetTime(0, 0, 0, 1, 0, m_curFbxScene->GetGlobalSettings().GetTimeMode());
+
+		// Since the end time is assumed to be inclusive, sample up to one frame beyond it
+		startTime = animTimeSpan.GetStart();
+		endTime = animTimeSpan.GetStop();
+	}
 
 	union
 	{
