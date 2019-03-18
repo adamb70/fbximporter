@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FBXImporter", "FBXImporter_win32_vs2010.vcxproj", "{1DED031F-BAD2-496F-BDDC-674D199A6A88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|win32 = Debug|win32
+		Dev|Any CPU = Dev|Any CPU
+		Dev|Mixed Platforms = Dev|Mixed Platforms
+		Dev|win32 = Dev|win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Debug|Any CPU.ActiveCfg = Debug|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Debug|Any CPU.Build.0 = Debug|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Debug|Mixed Platforms.ActiveCfg = Debug|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Debug|Mixed Platforms.Build.0 = Debug|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Debug|win32.ActiveCfg = Dev|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Debug|win32.Build.0 = Dev|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Dev|Any CPU.ActiveCfg = Dev|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Dev|Any CPU.Build.0 = Dev|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Dev|Mixed Platforms.ActiveCfg = Dev|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Dev|Mixed Platforms.Build.0 = Dev|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Dev|win32.ActiveCfg = Dev|win32
+		{1DED031F-BAD2-496F-BDDC-674D199A6A88}.Dev|win32.Build.0 = Dev|win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
