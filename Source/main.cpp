@@ -57,6 +57,17 @@ int main(int argc, char* argv[])
 	bool noTakes = false;
 	const char* inputFile = NULL;
 	const char* outputFile = NULL;
+	const char* tempOutputFile = NULL;
+
+	if (argc == 3)
+	{
+		// quick hack to allow second positional argument for output
+		tempOutputFile = argv[2];
+		for (int i = 2; i < argc; ++i)
+			argv[i] = argv[i + 1];
+		argc--;
+	}
+
 	// Parse command line
 	hkOptionParser parser("FBXImporter", "Converts an fbx file into a havok tagfile (.hkt)");
 	{
@@ -75,6 +86,11 @@ int main(int argc, char* argv[])
 				return -1;
 			}
 		}
+	}
+
+	if (tempOutputFile != NULL)
+	{
+		outputFile = tempOutputFile;
 	}
 
 	// Load FBX and save as HKX
